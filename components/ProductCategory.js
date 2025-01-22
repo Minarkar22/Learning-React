@@ -10,7 +10,7 @@ function ProductItems({product}) {
 
 
 export default function ProductCategory({products}) {
-    console.log("Products ,", products);
+    // console.log("Products ,", products);
     return (<div>
         <div className="italic text-lg">
             {products[0].category}
