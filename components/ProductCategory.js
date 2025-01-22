@@ -1,20 +1,23 @@
 
-function ProductItems() {
-    return <div className="flex items-center justify-center gap-16">
+function ProductItems({product}) {
+    return <div className="flex items-center justify-between">
         <div>
-            Apple
+            {product.name}
         </div>
-        <div> $4</div>
+        <div> {product.price}</div>
     </div>;
 }
 
 
-export default function ProductCategory() {
+export default function ProductCategory({products}) {
+    console.log("Products ,", products);
     return (<div>
         <div className="italic text-lg">
-            Fruits
+            {products[0].category}
         </div>
-        <ProductItems/>
+        {
+            products.map((product, index)=> <ProductItems product={product} key={index}/>)
+        }
         
     </div>)
 }
