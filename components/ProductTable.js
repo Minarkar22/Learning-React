@@ -1,7 +1,9 @@
 import ProductCategory from "./ProductCategory";
-import productsData from "./ProductsData";
 
-export default function ProductTable() {
+
+export default function ProductTable({categories}) {
+    console.log("Property Categories: ", categories);
+    
     return (<div className="flex justify-center items-center h-[100vh]">
         <div className="w-[250px] flex flex-col text-center">
         <h1 className="underline italic">Product Table</h1>
@@ -13,8 +15,13 @@ export default function ProductTable() {
                 Price
             </div>
         </div>
-        <ProductCategory products={productsData}/>
-        <ProductCategory products={productsData}/>
+        {/* <ProductCategory products={productsData}/>
+        <ProductCategory products={productsData}/> */}
+        {
+            categories.map((category,index) => 
+                <ProductCategory key={index}
+                                products={category[1]}/>)
+        }
         </div>
         
     </div>)
