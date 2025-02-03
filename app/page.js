@@ -1,5 +1,8 @@
 import ThemeComponents from "@/components/context/ThemeComponents";
 import WhyContext from "@/components/context/WhyContext";
+import EffectCleanUp from "@/components/effect/EffectCleanUp";
+import CustomHookDemo from "@/components/hook/CustomHookDemo";
+import ToDoFetch from "@/components/hook/ToDoFetch";
 import ProductList from "@/components/ProductList";
 import CounterWithReducer from "@/components/reducer/CounterWithReducer";
 import Image from "next/image";
@@ -11,7 +14,10 @@ export default function Home() {
         {/* <ProductList/> */}
         {/* <CounterWithReducer/> */}
         {/* <WhyContext/> */}
-        <ThemeComponents/>
+        {/* <ThemeComponents/>
+        <EffectCleanUp/> */}
+        {/* <ToDoFetch/> */}
+        <CustomHookDemo/>
     </div>
   );
 }
